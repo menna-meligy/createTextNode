@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="master.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="divone" style="height:200px ; width:200px ; border: 2px solid red; " onclick="addElem()"> </div>
+
+
+    <script>
+        function addElem() {
+            var Elem = document.createTextNode("this is a simple text element");
+
+            //document.body.appendChild(Elem); // after the div 
+
+            // document.getElementById("divone").appendChild(Elem); // inside the div
+
+            document.body.insertBefore(Elem, document.getElementById("divone"));
+
+
+        }
+    </script>
+</body>
+
+</html>
